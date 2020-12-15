@@ -1,7 +1,8 @@
 def hamiltonian( spins, H, D ) :
   energy = 0
   # Your code goes here
-  
+  avspin = sum(spins) / len(spins) 
+  for s in spins : energy = energy - (H+2*D*avspin)*s 
   return energy 
   
 allup, alldown = 8*[1], 8*[-1]
